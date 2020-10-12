@@ -1,0 +1,14 @@
+import React from 'react'
+import RepoItem from './RepoItem'
+
+const Repos = ({ repos }) => {
+    return (
+        repos.map(repo => <RepoItem key={repo.id} repo={repo} />)
+    )
+}
+
+Repos.prototype = {
+    repos: PropTypes.func.isRequired,
+}
+
+export default Repos
